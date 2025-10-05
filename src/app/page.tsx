@@ -44,11 +44,7 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-end gap-4">
               <span className="inline-block h-2 w-2 rounded-full bg-[#1c1c1c]" />
-              <span className="text-right">startups</span>
-            </div>
-            <div className="flex items-center justify-end gap-4">
-              <span className="inline-block h-2 w-2 rounded-full bg-[#1c1c1c]" />
-              <span className="text-right">ai products</span>
+              <span className="text-right"> ai startups</span>
             </div>
           </div>
         </div>
@@ -57,7 +53,7 @@ export default function Home() {
 
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.5fr)_minmax(0,1fr)] bg-316cff">
           <Link
-            href="https://t.me/rahimwws"
+            href="https://docsend.com/view/bmu7ryjke3u99gzu"
             className="flex flex-col gap-5 rounded-3xl bg-[#2E69FF] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.08)] backdrop-blur-sm sm:flex-row sm:items-end sm:gap-6"
           >
             <div className="relative w-full max-w-[50px] ">
