@@ -56,7 +56,7 @@ export default function Home() {
       <section className="flex flex-col items-center gap-16 px-6 pb-10 text-center sm:px-10 lg:px-16">
         <div className="flex flex-col items-center gap-6">
           <span className="text-xs uppercase  text-white/40">Get in touch</span>
-          <div className="flex flex-col gap-2 text-[clamp(2.8rem,8vw,5rem)] font-semibold">
+          <div className="flex flex-col gap-2 text-[clamp(2rem,8vw,5rem)] font-semibold sm:text-[clamp(2.8rem,8vw,5rem)]">
             {contactLinks.map(({ label, href, external }) => (
               <Link
                 key={label}
