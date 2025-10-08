@@ -4,11 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const contactLinks = [
-  { label: "rahim@nemy.agency", href: "mailto:rahim@nemy.agency" },
   { label: "Telegram", href: "https://t.me/rahimwws", external: true },
+  { label: "Email", href: "mailto:rahim@nemy.agency" },
   { label: "X (Twitter)", href: "https://x.com/rahimwws", external: true },
 ];
-
 export default function Home() {
   const currentYear = new Date().getFullYear();
 
@@ -24,12 +23,12 @@ export default function Home() {
         />
 
         <Link
-          href="https://t.me/rahimwws"
-          target="_blank"
+          href="/partners"
+          // target="_blank"
           rel="noreferrer"
-          className="absolute right-6 top-8 text-xs uppercase text-white/40 transition-colors hover:text-white sm:right-10 sm:top-12"
+          className="absolute right-6 top-8 text-sm  text-white/40 transition-colors hover:text-white sm:right-10 sm:top-12"
         >
-          Contact Us →
+          For Partners →
         </Link>
 
         <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8">
@@ -56,7 +55,7 @@ export default function Home() {
       <section className="flex flex-col items-center gap-16 px-6 pb-10 text-center sm:px-10 lg:px-16">
         <div className="flex flex-col items-center gap-6">
           <span className="text-xs uppercase  text-white/40">Get in touch</span>
-          <div className="flex flex-col gap-2 text-[clamp(2rem,8vw,5rem)] font-semibold sm:text-[clamp(2.8rem,8vw,5rem)]">
+          <div className="flex flex-col gap-2 text-[clamp(2.8rem,8vw,5rem)] font-semibold">
             {contactLinks.map(({ label, href, external }) => (
               <Link
                 key={label}
