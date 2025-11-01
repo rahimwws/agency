@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import logo from "./logo.png";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -15,6 +14,7 @@ const description =
   "Nemy Agency partners with startups, Web3, and AI teams to design and ship polished mobile experiences fast. Get the pitch deck and start building.";
 const ogImage =
   "https://opengraph.b-cdn.net/production/images/6ad8c647-92d8-496e-aaa4-99fd57faddbb.png?token=pqMbgxpAHZYzoNTn9a7JnB7pscN0KfIEL-RWyXbuf2M&height=332&width=1200&expires=33298037231";
+const logoUrl = `${siteUrl}/logo.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -48,13 +48,18 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: logo.src,
-        sizes: "512x512",
+        url: "/logo.png",
+        sizes: "any",
         type: "image/png",
       },
     ],
-    shortcut: logo.src,
-    apple: [{ url: logo.src, sizes: "180x180" }],
+    shortcut: "/logo.png",
+    apple: [{ url: "/logo.png", sizes: "180x180" }],
+  },
+  manifest: "/site.webmanifest",
+  other: {
+    "og:logo": logoUrl,
+    "theme-color": "#3680FF",
   },
 };
 
@@ -63,8 +68,71 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Nemy Agency",
+    url: siteUrl,
+    logo: logoUrl,
+    description:
+      "Mobile app product studio specializing in mobile, Web3, and AI applications",
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "hi@nemy.agency",
+      contactType: "Customer Service",
+    },
+    sameAs: [
+      "https://twitter.com/nemyagency",
+      "https://linkedin.com/company/nemyagency",
+      "https://instagram.com/nemyagency",
+      "https://t.me/nemyagency",
+    ],
+    potentialAction: [
+      {
+        "@type": "SearchAction",
+        target: `${siteUrl}/?s={search_term_string}`,
+        "query-input": "required name=search_term_string",
+      },
+    ],
+  };
+
+  const breadcrumbList = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Work",
+        item: `${siteUrl}/work`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: `${siteUrl}/services`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "About",
+        item: `${siteUrl}/about`,
+      },
+    ],
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+        />
+      </head>
       <body className={`${outfit.variable} antialiased`}>{children}</body>
     </html>
   );
