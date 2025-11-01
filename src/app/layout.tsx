@@ -14,7 +14,7 @@ const title = "Nemy Agency — Mobile App Product Studio";
 const description =
   "Nemy Agency partners with startups, Web3, and AI teams to design and ship polished mobile experiences fast. Get the pitch deck and start building.";
 const ogImage =
-  "https://opengraph.b-cdn.net/production/images/61cf5de0-faa2-4e40-abe4-bc0740e347d6.png?token=TGULA-gYqUWgJ10Ko6NuiJwL9HsedOCVNbyGyUyLqRg&height=675&width=1200&expires=33295775420";
+  "https://opengraph.b-cdn.net/production/images/6ad8c647-92d8-496e-aaa4-99fd57faddbb.png?token=pqMbgxpAHZYzoNTn9a7JnB7pscN0KfIEL-RWyXbuf2M&height=332&width=1200&expires=33298037231";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
