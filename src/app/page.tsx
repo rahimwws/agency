@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
@@ -25,42 +23,45 @@ export default function Home() {
           <nav className="flex items-center gap-2">
             <Link
               href="/work"
-              className="hidden md:flex text-sm md:text-base font-normal transition-colors bg-white px-3 md:px-4 py-2 rounded-[3px] h-10 items-center justify-center"
+              className="hidden md:flex text-sm md:text-base font-normal transition-all duration-300 bg-white hover:!bg-[#3680FF] hover:!text-white px-3 md:px-4 py-2 rounded-[3px] h-10 items-center justify-center active:scale-95"
               style={{ color: "#161617" }}
             >
               work
             </Link>
             <Link
               href="/services"
-              className="hidden md:flex text-sm md:text-base font-normal transition-colors bg-white px-3 md:px-4 py-2 rounded-[3px] h-10 items-center justify-center"
+              className="hidden md:flex text-sm md:text-base font-normal transition-all duration-300 bg-white hover:!bg-[#3680FF] hover:!text-white px-3 md:px-4 py-2 rounded-[3px] h-10 items-center justify-center active:scale-95"
               style={{ color: "#161617" }}
             >
               services
             </Link>
             <Link
               href="/about"
-              className="hidden md:flex text-sm md:text-base font-normal transition-colors bg-white px-3 md:px-4 h-10 items-center justify-center rounded-[3px]"
+              className="hidden md:flex text-sm md:text-base font-normal transition-all duration-300 bg-white hover:!bg-[#3680FF] hover:!text-white px-3 md:px-4 h-10 items-center justify-center rounded-[3px] active:scale-95"
               style={{ color: "#161617" }}
             >
               about
             </Link>
             <Link
               href="/contact"
-              className="pl-2 md:pl-4 pr-1 md:pr-1 h-8 md:h-10 rounded-[3px] text-white flex items-center justify-between gap-1.5 md:gap-2 transition-all hover:opacity-90 text-xs md:text-base"
+              className="group pl-2 md:pl-4 pr-1 md:pr-1 h-8 md:h-10 rounded-[3px] text-white hover:!bg-white hover:!text-black flex items-center justify-between gap-1.5 md:gap-2 transition-all duration-300 text-xs md:text-base active:scale-95"
               style={{ backgroundColor: "#3680FF" }}
             >
-              <span className="">get in touch</span>
-              <div className="bg-white rounded-[3px] h-6 w-6 md:h-8 md:w-8 flex items-center justify-center flex-shrink-0">
+              <span className="transition-colors duration-300">
+                get in touch
+              </span>
+              <div className="bg-white group-hover:!bg-[#3680FF] rounded-[3px] h-6 w-6 md:h-8 md:w-8 flex items-center justify-center flex-shrink-0 transition-all duration-300">
                 <svg
                   width="16"
                   height="16"
                   viewBox="0 0 16 16"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-3 h-3 md:w-4 md:h-4"
+                  className="w-3 h-3 md:w-4 md:h-4  transition-transform duration-300"
                 >
                   <path
                     d="M3 8H13M13 8L8 3M13 8L8 13"
+                    className="group-hover:!stroke-white transition-colors duration-300"
                     stroke="black"
                     strokeWidth="1.5"
                     strokeLinecap="round"
@@ -157,13 +158,30 @@ export default function Home() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Project 1 */}
-          <div className="flex flex-col gap-3 md:gap-4">
+          <div className="flex flex-col gap-3 md:gap-4 group">
             <div
               className="aspect-[4/3] md:aspect-[5/4] rounded-[2px] relative overflow-hidden h-[280px] md:h-[420px] lg:h-[520px]"
               style={{
                 backgroundColor: "#E8E8E8",
               }}
-            ></div>
+            >
+              <Image
+                src="/cases/1.png"
+                alt="Healy AI"
+                width={500}
+                height={500}
+                className="w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-105 group-hover:blur-sm"
+              />
+              <div className="absolute inset-x-0 bottom-0 translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-out bg-white/80 backdrop-blur-sm px-4 py-3 pointer-events-none">
+                <p
+                  className="text-xs md:text-sm font-normal"
+                  style={{ color: "#161617" }}
+                >
+                  Reimagined patient journeys and mobile intake flows in under
+                  four weeks.
+                </p>
+              </div>
+            </div>
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
               <div className="text-base md:text-lg">
                 <span className="font-semibold" style={{ color: "#161617" }}>
@@ -195,13 +213,30 @@ export default function Home() {
           </div>
 
           {/* Project 2 */}
-          <div className="flex flex-col gap-3 md:gap-4">
+          <div className="flex flex-col gap-3 md:gap-4 group">
             <div
               className="aspect-[4/3] md:aspect-[5/4] rounded-[2px] relative overflow-hidden h-[280px] md:h-[420px] lg:h-[520px]"
               style={{
                 backgroundColor: "#E8E8E8",
               }}
-            ></div>
+            >
+              <Image
+                src="/cases/2.png"
+                alt="Healy AI"
+                width={500}
+                height={500}
+                className="w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-105 group-hover:blur-sm"
+              />
+              <div className="absolute inset-x-0 bottom-0 translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-out bg-white/80 backdrop-blur-sm px-4 py-3 pointer-events-none">
+                <p
+                  className="text-xs md:text-sm font-normal"
+                  style={{ color: "#161617" }}
+                >
+                  Delivered clinician dashboards and care ops tooling with zero
+                  downtime launch.
+                </p>
+              </div>
+            </div>
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
               <div className="text-base md:text-lg">
                 <span className="font-semibold" style={{ color: "#161617" }}>
@@ -233,13 +268,30 @@ export default function Home() {
           </div>
 
           {/* Project 3 */}
-          <div className="flex flex-col gap-3 md:gap-4">
+          <div className="flex flex-col gap-3 md:gap-4 group">
             <div
               className="aspect-[4/3] md:aspect-[5/4] rounded-[2px] relative overflow-hidden h-[280px] md:h-[420px] lg:h-[520px]"
               style={{
                 backgroundColor: "#E8E8E8",
               }}
-            ></div>
+            >
+              <Image
+                src="/cases/3.png"
+                alt="Healy AI"
+                width={500}
+                height={500}
+                className="w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-105 group-hover:blur-sm"
+              />
+              <div className="absolute inset-x-0 bottom-0 translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-out bg-white/80 backdrop-blur-sm px-4 py-3 pointer-events-none">
+                <p
+                  className="text-xs md:text-sm font-normal"
+                  style={{ color: "#161617" }}
+                >
+                  Extended the experience with motion specs and onboarding flow
+                  experiments.
+                </p>
+              </div>
+            </div>
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
               <div className="text-base md:text-lg">
                 <span className="font-semibold" style={{ color: "#161617" }}>
@@ -271,13 +323,30 @@ export default function Home() {
           </div>
 
           {/* Project 4 */}
-          <div className="flex flex-col gap-3 md:gap-4">
+          <div className="flex flex-col gap-3 md:gap-4 group">
             <div
               className="aspect-[4/3] md:aspect-[5/4] rounded-[2px] relative overflow-hidden h-[280px] md:h-[420px] lg:h-[520px]"
               style={{
                 backgroundColor: "#E8E8E8",
               }}
-            ></div>
+            >
+              <Image
+                src="/cases/4.png"
+                alt="Healy AI"
+                width={500}
+                height={500}
+                className="w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-105 group-hover:blur-sm"
+              />
+              <div className="absolute inset-x-0 bottom-0 translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-out bg-white/80 backdrop-blur-sm px-4 py-3 pointer-events-none">
+                <p
+                  className="text-xs md:text-sm font-normal"
+                  style={{ color: "#161617" }}
+                >
+                  Led launch analytics, growth experiments, and activation QA
+                  for rollout.
+                </p>
+              </div>
+            </div>
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
               <div className="text-base md:text-lg">
                 <span className="font-semibold" style={{ color: "#161617" }}>
@@ -907,25 +976,150 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Our Values Section */}
+      <section className="mx-auto max-w-7xl px-6 md:px-8 py-12 md:py-24">
+        <div className="mb-6 md:mb-12">
+          <p
+            className="text-xl md:text-2xl mb-2 font-regular"
+            style={{ color: "#C9CDD2" }}
+          >
+            our values
+          </p>
+          <h2
+            className="font-outfit font-normal lowercase text-2xl md:text-4xl lg:text-5xl"
+            style={{
+              color: "#161617",
+              fontWeight: 400,
+              lineHeight: "110%",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            bespoke sprints, live demos, one hub, tiered pricing, you hold the
+            keys.
+          </h2>
+        </div>
+
+        {/* Values Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+          {/* Value 1 - taste over hype */}
+          <div className="group bg-white hover:bg-[#3680FF] rounded-[3px] p-6 md:p-8 transition-all duration-300">
+            <h3
+              className="text-xl md:text-2xl font-semibold mb-2 group-hover:!text-white transition-colors duration-300"
+              style={{ color: "#161617" }}
+            >
+              taste over hype
+            </h3>
+            <p
+              className="text-base md:text-lg font-light group-hover:!text-white transition-colors duration-300"
+              style={{ color: "#C9CDD2" }}
+            >
+              useful beats flashy.
+            </p>
+          </div>
+
+          {/* Value 2 - clarity */}
+          <div className="group bg-white hover:bg-[#3680FF] rounded-[3px] p-6 md:p-8 transition-all duration-300">
+            <h3
+              className="text-xl md:text-2xl font-semibold mb-2 group-hover:!text-white transition-colors duration-300"
+              style={{ color: "#161617" }}
+            >
+              clarity
+            </h3>
+            <p
+              className="text-base md:text-lg font-light group-hover:!text-white transition-colors duration-300"
+              style={{ color: "#C9CDD2" }}
+            >
+              lain words, one board, clean handoffs.
+            </p>
+          </div>
+
+          {/* Value 3 - ship over show */}
+          <div className="group bg-white hover:bg-[#3680FF] rounded-[3px] p-6 md:p-8 transition-all duration-300">
+            <h3
+              className="text-xl md:text-2xl font-semibold mb-2 group-hover:!text-white transition-colors duration-300"
+              style={{ color: "#161617" }}
+            >
+              ship over show
+            </h3>
+            <p
+              className="text-base md:text-lg font-light group-hover:!text-white transition-colors duration-300"
+              style={{ color: "#C9CDD2" }}
+            >
+              releases &gt; slides.
+            </p>
+          </div>
+
+          {/* Value 4 - ownership */}
+          <div className="group bg-white hover:bg-[#3680FF] rounded-[3px] p-6 md:p-8 transition-all duration-300">
+            <h3
+              className="text-xl md:text-2xl font-semibold mb-2 group-hover:!text-white transition-colors duration-300"
+              style={{ color: "#161617" }}
+            >
+              ownership
+            </h3>
+            <p
+              className="text-base md:text-lg font-light group-hover:!text-white transition-colors duration-300"
+              style={{ color: "#C9CDD2" }}
+            >
+              our repo, your design files, your ip.
+            </p>
+          </div>
+
+          {/* Value 5 - privacy by default */}
+          <div className="group bg-white hover:bg-[#3680FF] rounded-[3px] p-6 md:p-8 transition-all duration-300">
+            <h3
+              className="text-xl md:text-2xl font-semibold mb-2 group-hover:!text-white transition-colors duration-300"
+              style={{ color: "#161617" }}
+            >
+              privacy by default
+            </h3>
+            <p
+              className="text-base md:text-lg font-light group-hover:!text-white transition-colors duration-300"
+              style={{ color: "#C9CDD2" }}
+            >
+              collect less, protect more.
+            </p>
+          </div>
+
+          {/* Value 6 - kind candor */}
+          <div className="group bg-white hover:bg-[#3680FF] rounded-[3px] p-6 md:p-8 transition-all duration-300">
+            <h3
+              className="text-xl md:text-2xl font-semibold mb-2 group-hover:!text-white transition-colors duration-300"
+              style={{ color: "#161617" }}
+            >
+              kind candor
+            </h3>
+            <p
+              className="text-base md:text-lg font-light group-hover:!text-white transition-colors duration-300"
+              style={{ color: "#C9CDD2" }}
+            >
+              direct feedback, zero ego.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="bg-white py-12 md:py-24 pb-16 md:pb-26">
-        <div className="mx-auto max-w-7xl px-6 md:px-8">
-          {/* Main Footer Content */}
-          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-12 md:gap-20 lg:gap-32 mb-16 md:mb-24 lg:mb-36">
-            {/* Left Column */}
-            <div className="flex-1">
+      <footer style={{ backgroundColor: "#F6F7F9" }}>
+        <div className="w-full min-h-[500px] md:min-h-[550px] flex flex-col md:flex-row gap-0">
+          {/* Left Column - Contact & Navigation */}
+          <div className="bg-white w-full md:w-[65%] rounded-[6px] md:rounded-none px-6 py-8 md:px-8 md:py-10 lg:px-10 lg:py-12 flex flex-col justify-between gap-12 md:gap-16">
+            {/* Contact Section */}
+            <div className="flex flex-col gap-6 md:gap-8">
               <p
-                className="text-sm md:text-base font-light mb-6 md:mb-8 max-w-md"
+                className="text-sm md:text-base font-light max-w-md"
                 style={{ color: "#C9CDD2" }}
               >
-                thank you for exploring our works! if you&apos;d like to
+                thank you for exploring my work! if you&apos;d like to
                 collaborate, please feel free to reach out
               </p>
               <Link
-                href="mailto:hi@nemy.agency"
-                className="text-3xl md:text-5xl lg:text-6xl font-normal inline-flex items-center gap-3 md:gap-4 group text-[#161617] hover:text-[#3680FF] transition-all duration-300"
+                href="https://t.me/rahimwws"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-3xl md:text-4xl lg:text-5xl font-normal inline-flex items-center gap-3 md:gap-4 group transition-all duration-300 hover:text-[#3680FF] text-[#161617]"
               >
-                <span className="break-all">Message in Telegram</span>
+                <span className="break-all">message in telegram</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="40"
@@ -935,7 +1129,6 @@ export default function Home() {
                   className="group-hover:translate-x-2 transition-transform duration-300 w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 flex-shrink-0"
                 >
                   <path
-                    className="group-hover:stroke-[#3680FF] transition-all duration-300"
                     stroke="currentColor"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -946,15 +1139,14 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Right Column - Links */}
-            <div className="lg:flex-shrink-0">
-              {/* Social Links */}
-              <div className="flex flex-col gap-3 md:gap-4">
+            {/* Navigation Links */}
+            <div className="grid grid-cols-2 gap-8 md:gap-12 lg:gap-16">
+              <div className="flex flex-col gap-4 md:gap-5">
                 <Link
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-lg md:text-xl font-normal inline-flex items-center gap-2 transition-opacity hover:opacity-70"
+                  className="text-sm md:text-base font-medium lowercase transition-opacity hover:opacity-70"
                   style={{ color: "#161617" }}
                 >
                   X (twitter)
@@ -963,7 +1155,7 @@ export default function Home() {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-lg md:text-xl font-normal inline-flex items-center gap-2 transition-opacity hover:opacity-70"
+                  className="text-sm md:text-base font-medium lowercase transition-opacity hover:opacity-70"
                   style={{ color: "#161617" }}
                 >
                   LinkedIn
@@ -972,7 +1164,7 @@ export default function Home() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-lg md:text-xl font-normal inline-flex items-center gap-2 transition-opacity hover:opacity-70"
+                  className="text-sm md:text-base font-medium lowercase transition-opacity hover:opacity-70"
                   style={{ color: "#161617" }}
                 >
                   Instagram
@@ -981,35 +1173,84 @@ export default function Home() {
                   href="https://telegram.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-lg md:text-xl font-normal inline-flex items-center gap-2 transition-opacity hover:opacity-70"
+                  className="text-sm md:text-base font-medium lowercase transition-opacity hover:opacity-70"
                   style={{ color: "#161617" }}
                 >
                   Telegram
                 </Link>
               </div>
             </div>
+
+            {/* Bottom Footer */}
+            <div
+              className="flex flex-col gap-6 border-t pt-6 md:pt-8 md:flex-row md:items-center md:justify-between"
+              style={{ borderColor: "#F6F7F9" }}
+            >
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/logo.png"
+                  alt="Nemy Logo"
+                  width={28}
+                  height={28}
+                  className="w-6 h-6 md:w-7 md:h-7"
+                />
+                <span
+                  className="text-sm md:text-base font-medium lowercase"
+                  style={{ color: "#161617" }}
+                >
+                  nemy
+                </span>
+              </div>
+              <p
+                className="text-xs md:text-sm font-light"
+                style={{ color: "#C9CDD2" }}
+              >
+                2025 all rights reserved
+              </p>
+            </div>
           </div>
 
-          {/* Bottom Footer */}
+          {/* Right Column - CTA Block */}
           <div
-            className="z-10 flex items-center justify-between pt-8 md:pt-16 lg:pt-24 border-t md:border-0"
-            style={{ borderColor: "#F6F7F9" }}
+            className="relative overflow-hidden rounded-[6px] md:rounded-none w-full md:w-[35%] text-white flex flex-col justify-between gap-8 md:gap-10 px-8 py-10 md:px-10 md:py-12 lg:px-12 lg:py-14"
+            style={{ backgroundColor: "#3680FF" }}
           >
-            <div className="flex items-center gap-2">
-              <Image
-                src="/logo.png"
-                alt="Nemy Logo"
-                width={24}
-                height={24}
-                className="w-5 h-5 md:w-6 md:h-6"
-              />
+            <div className="flex flex-col gap-3 md:gap-4">
+              <h3 className="text-8xl md:text-9xl lg:text-9xl font-semibold leading-[1.05]">
+                let&apos;s build
+              </h3>
+              <p className="text-xl md:text-2xl lg:text-3xl font-light leading-snug">
+                your product together
+              </p>{" "}
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-3 self-start rounded-[6px]  bg-white text-sm md:text-base font-medium transition-all duration-300 hover:bg-black hover:text-white pl-5 py-0.5 pr-0.5"
+                style={{ color: "#3680FF" }}
+              >
+                <span>get in touch</span>
+                <span
+                  className="flex h-8 w-8 items-center justify-center rounded-[4px] text-white transition-all duration-300 group-hover:bg-white"
+                  style={{ backgroundColor: "#3680FF" }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="none"
+                    viewBox="0 0 16 16"
+                    className="group-hover:!text-black"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.6"
+                      d="M3 8h10m0 0L8 3m5 5-5 5"
+                    />
+                  </svg>
+                </span>
+              </Link>
             </div>
-            <p
-              className="text-xs md:text-sm font-light"
-              style={{ color: "#C9CDD2" }}
-            >
-              2025 all rights reserved
-            </p>
           </div>
         </div>
       </footer>
@@ -1018,7 +1259,7 @@ export default function Home() {
         height={
           typeof window !== "undefined" && window.innerWidth < 768
             ? "8%"
-            : "15%"
+            : "10%"
         }
         className="fixed bottom-0 left-0 right-0 z-0"
         position="bottom"
