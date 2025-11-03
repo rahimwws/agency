@@ -52,7 +52,7 @@ export default function OurWorks() {
           our works
         </h2>
         <Link
-          href="/cases"
+          href="https://t.me/nemy_dev"
           className="pl-3 md:pl-4 pr-1 h-8 md:h-10 rounded-[3px] text-black flex items-center justify-between gap-2 transition-all hover:opacity-90 text-sm md:text-base"
           style={{ backgroundColor: "white" }}
         >

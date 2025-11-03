@@ -72,7 +72,7 @@ export default function TelegramBanner({ onClose }: TelegramBannerProps) {
 
             {/* CTA Button */}
             <Link
-              href="https://t.me/rahimwws"
+              href="https://t.me/nemy_dev"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-[#3680FF] px-3 py-1.5 md:px-4 md:py-2 rounded-[6px] text-xs md:text-sm font-medium hover:bg-gray-100 transition-all duration-300 group"
