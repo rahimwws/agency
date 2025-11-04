@@ -91,8 +91,10 @@ export default function OurWorks() {
               <Image
                 src={project.image}
                 alt={project.title}
-                width={500}
-                height={500}
+                width={800}
+                height={600}
+                quality={90}
+                loading="lazy"
                 className="w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-105 group-hover:blur-sm"
               />
               <div className="absolute inset-x-0 bottom-0 translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-out bg-white/80 backdrop-blur-sm px-4 py-3 pointer-events-none">

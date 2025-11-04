@@ -26,10 +26,10 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: "#F6F7F9" }}>
-      <div className="w-full min-h-[500px] md:min-h-[550px] flex flex-col md:flex-row gap-0 ">
+    <footer style={{ backgroundColor: "#F6F7F9", zIndex: 50 }}>
+      <div className="w-full min-h-[500px] md:min-h-[550px] flex flex-col md:flex-row gap-0 z-50">
         {/* Left Column - Contact & Navigation */}
-        <div className="bg-white w-full md:w-[65%] rounded-[6px] md:rounded-none px-6 py-8 md:px-8 md:py-10 lg:px-10 lg:py-12 flex flex-col justify-between gap-12 md:gap-16">
+        <div className="bg-white w-full md:w-[65%] rounded-[6px] md:rounded-none px-6 py-8 md:px-8 md:py-10 lg:px-10 lg:py-12 flex flex-col justify-between gap-12 md:gap-16 z-50">
           {/* Contact Section */}
           <div className="flex flex-col gap-6 md:gap-8">
             <p
@@ -85,7 +85,7 @@ export default function Footer() {
 
           {/* Bottom Footer */}
           <div
-            className="flex flex-col gap-6 border-t pt-6 md:pt-8 md:flex-row md:items-center md:justify-between"
+            className="flex flex-col gap-6 z-40 border-t pt-6 md:pt-8 md:flex-row md:items-center md:justify-between"
             style={{ borderColor: "#F6F7F9" }}
           >
             <div className="flex items-center gap-3 z-40">
