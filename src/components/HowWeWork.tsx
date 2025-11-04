@@ -21,7 +21,7 @@ const steps = [
     id: 4,
     number: "04.",
     title: "support & grow",
-    tags: [],
+    tags: ["analytics", "performance"],
   },
 ];
 

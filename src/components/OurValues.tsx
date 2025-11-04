@@ -60,16 +60,16 @@ export default function OurValues() {
         {values.map((value) => (
           <div
             key={value.id}
-            className="group bg-white hover:bg-[#3680FF] rounded-[3px] p-6 md:p-8 transition-all duration-300"
+            className="group bg-white rounded-[3px] p-6 md:p-8 transition-all duration-300 relative overflow-hidden"
           >
             <h3
-              className="text-xl md:text-2xl font-semibold mb-2 group-hover:!text-white transition-colors duration-300"
+              className="text-xl md:text-2xl font-semibold mb-2 transition-colors duration-300 relative z-10 bg-white"
               style={{ color: "#161617" }}
             >
               {value.title}
             </h3>
             <p
-              className="text-base md:text-lg font-light group-hover:!text-white transition-colors duration-300"
+              className="text-base md:text-lg font-light absolute bottom-0 left-0 right-0 px-6 md:px-8 pb-6 md:pb-8 translate-y-full group-hover:translate-y-4 transition-all duration-300 ease-out  z-0"
               style={{ color: "#C9CDD2" }}
             >
               {value.description}

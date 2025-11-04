@@ -88,7 +88,7 @@ export default function Footer() {
             className="flex flex-col gap-6 border-t pt-6 md:pt-8 md:flex-row md:items-center md:justify-between"
             style={{ borderColor: "#F6F7F9" }}
           >
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 z-40">
               <Image
                 src="/logo.png"
                 alt="Nemy Logo"
@@ -104,7 +104,7 @@ export default function Footer() {
               </span>
             </div>
             <p
-              className="text-xs md:text-sm font-light"
+              className="text-xs md:text-sm font-light z-40"
               style={{ color: "#C9CDD2" }}
             >
               2025 all rights reserved
