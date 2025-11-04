@@ -2,26 +2,26 @@ const steps = [
   {
     id: 1,
     number: "01.",
-    title: "jam",
-    tags: ["goals", "scope", "KPI"],
+    title: "discovery",
+    tags: ["goals", "scope"],
   },
   {
     id: 2,
     number: "02.",
-    title: "prototype",
-    tags: ["flows", "quick tests", "clickable figma"],
+    title: "design & build",
+    tags: ["ios", "android", "web"],
   },
   {
     id: 3,
     number: "03.",
-    title: "build & ship",
-    tags: ["sprints", "demos", "CI/CD", "launch"],
+    title: "launch",
+    tags: ["sprints", "demos"],
   },
   {
     id: 4,
     number: "04.",
-    title: "grow",
-    tags: ["A/B", "analytics", "retention & performance"],
+    title: "support & grow",
+    tags: [],
   },
 ];
 

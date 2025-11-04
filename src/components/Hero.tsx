@@ -42,13 +42,13 @@ export default function Hero() {
             className="text-base md:text-xl font-normal"
             style={{ color: "#161617" }}
           >
-            dm → prototype → prod. weeks, not quarters.
+            we build mobile apps for web3 and AI products
           </p>
           <p
             className="text-base md:text-xl font-medium"
             style={{ color: "#C9CDD2" }}
           >
-            minimal design, sharp engineering. you own the IP.
+            with taste - from prototype to release.
           </p>
         </div>
       </div>
