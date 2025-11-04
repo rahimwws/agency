@@ -40,7 +40,7 @@ export default function Header() {
             about
           </Link>
           <Link
-            href="/contact"
+            href="https://t.me/rahimwws"
             className="group pl-2 md:pl-4 pr-1 md:pr-1 h-8 md:h-10 rounded-[3px] text-white hover:!bg-white hover:!text-black flex items-center justify-between gap-1.5 md:gap-2 transition-all duration-300 text-xs md:text-base active:scale-95"
             style={{ backgroundColor: "#3680FF" }}
           >

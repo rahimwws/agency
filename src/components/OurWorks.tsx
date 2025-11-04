@@ -42,7 +42,7 @@ const projects = [
 
 export default function OurWorks() {
   return (
-    <section className="mx-auto max-w-7xl px-6 md:px-8 py-12 md:py-24">
+    <section className="mx-auto max-full px-6 md:px-8 py-12 md:py-24">
       {/* Section Header */}
       <div className="flex items-center justify-between mb-6">
         <h2
