@@ -10,7 +10,7 @@ interface TelegramBannerProps {
 export default function TelegramBanner({ onClose }: TelegramBannerProps) {
   return (
     <div
-      className="fixed bottom-0 md:right-0 left-0 right-0 md:left-auto z-40 animate-[slideUp_0.6s_ease-out]"
+      className="fixed bottom-0 md:right-0 left-0 right-0 md:left-auto z-50 animate-[slideUp_0.6s_ease-out]"
       style={{
         animation: "slideUp 0.6s ease-out forwards",
       }}

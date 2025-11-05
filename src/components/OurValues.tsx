@@ -1,33 +1,38 @@
 const values = [
   {
     id: 1,
-    title: "taste over hype",
-    description: "useful beats flashy.",
+    title: "60% cheaper than in-house",
+    description: "top-tier engineering without bloated payrolls or overhead.",
   },
   {
     id: 2,
-    title: "clarity",
-    description: "lain words, one board, clean handoffs.",
+    title: "senior-only team",
+    description:
+      "engineers with 6+ years of experience — no interns, no experiments.",
   },
   {
     id: 3,
-    title: "ship over show",
-    description: "releases > slides.",
+    title: "end-to-end delivery",
+    description:
+      "from concept to launch — design, backend, mobile, web, all in one studio.",
   },
   {
     id: 4,
-    title: "ownership",
-    description: "our repo, your design files, your ip.",
+    title: "real product mindset",
+    description:
+      "we think like founders, not contractors — speed, value, and impact first.",
   },
+
   {
     id: 5,
-    title: "privacy by default",
-    description: "collect less, protect more.",
+    title: "transparent process",
+    description:
+      "you get weekly builds, live dashboards, and full repo access — zero black box.",
   },
   {
     id: 6,
-    title: "kind candor",
-    description: "direct feedback, zero ego.",
+    title: "global quality, startup agility",
+    description: "enterprise-level engineering with startup speed and care.",
   },
 ];
 
@@ -60,16 +65,16 @@ export default function OurValues() {
         {values.map((value) => (
           <div
             key={value.id}
-            className="group bg-white rounded-[3px] p-6 md:p-8 transition-all duration-300 relative overflow-hidden"
+            className="group bg-white rounded-[3px] p-6 md:p-8 transition-all duration-300 relative overflow-hidden min-h-[120px] md:min-h-[140px] flex items-center"
           >
             <h3
-              className="text-xl md:text-2xl font-semibold mb-2 transition-colors duration-300 relative z-10 bg-white"
+              className="text-xl md:text-2xl font-semibold transition-all duration-300 relative z-10 bg-white group-hover:-translate-y-3 md:group-hover:-translate-y-4"
               style={{ color: "#161617" }}
             >
               {value.title}
             </h3>
             <p
-              className="text-base md:text-lg font-light absolute bottom-0 left-0 right-0 px-6 md:px-8 pb-6 md:pb-8 translate-y-full group-hover:translate-y-4 transition-all duration-300 ease-out  z-0"
+              className="text-base md:text-lg font-light absolute bottom-0 left-0 right-0 px-6 md:px-8 pb-6 md:pb-8 translate-y-full group-hover:translate-y-3 transition-all duration-300 ease-out z-0"
               style={{ color: "#C9CDD2" }}
             >
               {value.description}
