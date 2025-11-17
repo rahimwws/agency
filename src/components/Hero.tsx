@@ -15,7 +15,7 @@ export default function Hero() {
             by="character"
             once
           >
-            0
+            from 0
           </TextAnimate>
           <svg
             width="18"
@@ -41,7 +41,7 @@ export default function Hero() {
             by="character"
             once
           >
-            1
+            to 1
           </TextAnimate>
         </div>
 
@@ -53,7 +53,7 @@ export default function Hero() {
           once
           delay={0.3}
         >
-          Software Partner
+          software partner
         </TextAnimate>
       </>
     ),
